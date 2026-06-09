@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1d2b1f, #050505 55%);
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+}
+
+.phone {
+  width: 100%;
+  max-width: 430px;
+  min-height: calc(100vh - 36px);
+  background: linear-gradient(180deg, #111, #050505);
+  border: 1px solid rgba(57, 255, 20, 0.25);
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 0 35px rgba(57, 255, 20, 0.15);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #39ff14;
+  font-size: 25px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #ff8c00;
+  font-size: 14px;
+}
+
+.welcome-card,
+.calculator-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(57, 255, 20, 0.18);
+  border-radius: 22px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.welcome-card h2,
+.calculator-card h2 {
+  margin: 0 0 6px;
+  color: #39ff14;
+}
+
+.welcome-card p,
+.muted {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.menu-btn {
+  min-height: 95px;
+  border: 1px solid rgba(57, 255, 20, 0.25);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #171717, #0a0a0a);
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.menu-btn span {
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+  color: #f2f2f2;
+}
+
+.menu-btn.active {
+  border-color: #39ff14;
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.2);
+}
+
+.back-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #ff8c00;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-grid {
+  display: grid;
+  gap: 13px;
+  margin-top: 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  color: #e7e7e7;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: 1px solid rgba(57, 255, 20, 0.25);
+  background: #070707;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #39ff14;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.result-card {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.result-card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 13px;
+}
+
+.result-card span {
+  color: #cfcfcf;
+  font-size: 13px;
+}
+
+.result-card strong {
+  color: white;
+  font-size: 17px;
+}
+
+.result-card .recommended {
+  border-color: #39ff14;
+  background: rgba(57, 255, 20, 0.09);
+}
+
+.result-card .recommended strong {
+  color: #39ff14;
+  font-size: 20px;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: #39ff14;
+  color: #050505;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+}
+.vinil-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+.vinil-card {
+  width: 100%;
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid rgba(57, 255, 20, 0.3);
+  background: linear-gradient(145deg, #111111, #050505);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.vinil-card strong {
+  display: block;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.vinil-card span {
+  color: #cfcfcf;
+  font-size: 13px;
+}
+
+.vinil-card:hover {
+  transform: translateY(-2px);
+  border-color: #39ff14;
+}
+
+.vinil-card.selected {
+  background: #39ff14;
+  border-color: #39ff14;
+  color: #050505;
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.35);
+}
+
+.vinil-card.selected strong,
+.vinil-card.selected span {
+  color: #050505;
+}
+
+.install-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 140, 0, 0.5);
+  background: rgba(255, 140, 0, 0.12);
+  color: #ff8c00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.install-btn.active-install {
+  background: #ff8c00;
+  color: #050505;
+}
+.calculadora select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  border: 1px solid #2cff05;
+  background: #050505;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(44, 255, 5, 0.15);
+}
+
+.calculadora select:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 16px rgba(255, 122, 0, 0.35);
+}
+
+.calculadora option {
+  background: #050505;
+  color: #ffffff;
+}
+.selector-opciones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.opcion {
+  border: 1px solid rgba(44, 255, 5, 0.35);
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: 11px 8px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.opcion.activa {
+  background: linear-gradient(135deg, #2cff05, #ff7a00);
+  color: #000000;
+  border-color: transparent;
+}
+
+.nota {
+  margin: 4px 0 14px;
+  font-size: 12px;
+  color: #cfcfcf;
+  line-height: 1.4;
+}
+
+.consejo {
+  margin-top: 18px;
+  padding: 12px;
+  background: #111111;
+  border: 1px solid #2cff05;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.consejo p {
+  margin-top: 8px;
+  line-height: 1.4;
+}
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.check-btn {
+  border: 1px solid rgba(44, 255, 5, 0.35);
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: 11px 8px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.check-btn.activo {
+  background: linear-gradient(135deg, #2cff05, #ff7a00);
+  color: #000000;
+  border-color: transparent;
+}
